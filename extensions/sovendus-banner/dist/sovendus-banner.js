@@ -19799,32 +19799,9 @@ ${errorInfo.componentStack}`);
     });
   }
   var newBannerData = {
-    imageBanner: {
-      bannerImageUrl: "https://i.ibb.co/W2f3xrp/banner6.png",
-      bannerUrl: "https://online.sovendus.com/online-datenschutzhinweise/",
-      dataUsageText: [
-        { text: "Hinweise zur " },
-        {
-          text: "Datenverarbeitung",
-          url: "https://online.sovendus.com/online-datenschutzhinweise/"
-        },
-        { text: " durch Sovendus" }
-      ]
-    },
-    // nativeBanner: {
-    //   title: "1 kleines Geschenk wartet auf Dich!",
-    //   description: [
-    //     {
-    //       text: "Als Dankeschön für Deine Bestellung kannst Du Dir jetzt einen ",
-    //     },
-    //     { text: "exklusiven Gutschein", bold: true },
-    //     { text: " aus unserem Partnernetzwerk aussuchen." },
-    //   ],
-    //   imageUrl:
-    //     "https://assets.sovendus.com/banner/assets/images/giftbox_01_percentage_anim_bounce.svg",
-    //   selectVoucherText: "Gutschein auswählen",
-    //   bannerUrl:
-    //     "https://www.sovendus-network.com/app-sales/4049b0ca-4160-471d-b608-9633140bc28f/4049b0ca-4160-471d-b608-9633140bc28f/cd01ad5e-0f88-4c18-9a9b-ec6fa0e9e282/13f1b537-91c3-5adb-9462-d2276b00f5ce#voucherStyle=noimage",
+    // imageBanner: {
+    //   bannerImageUrl: "https://i.ibb.co/W2f3xrp/banner6.png",
+    //   bannerUrl: "https://www.sovendus-network.com/app-sales/d505e8b8-c064-4973-bac3-2c8fb6c12a75/d505e8b8-c064-4973-bac3-2c8fb6c12a75/c9ae5ec0-cbc0-4c33-9868-1f926261db2a/a1078c69-58b9-57b8-8260-3d4f31ec545c#voucherStyle=noimage",
     //   dataUsageText: [
     //     { text: "Hinweise zur " },
     //     {
@@ -19834,6 +19811,27 @@ ${errorInfo.componentStack}`);
     //     { text: " durch Sovendus" },
     //   ],
     // },
+    nativeBanner: {
+      title: "1 kleines Geschenk wartet auf Dich!",
+      description: [
+        {
+          text: "Als Dankesch\xF6n f\xFCr Deine Bestellung kannst Du Dir jetzt einen "
+        },
+        { text: "exklusiven Gutschein", bold: true },
+        { text: " aus unserem Partnernetzwerk aussuchen." }
+      ],
+      imageUrl: "https://assets.sovendus.com/banner/assets/images/giftbox_01_percentage_anim_bounce.svg",
+      selectVoucherText: "Gutschein ausw\xE4hlen",
+      bannerUrl: "https://www.sovendus-network.com/app-sales/4049b0ca-4160-471d-b608-9633140bc28f/4049b0ca-4160-471d-b608-9633140bc28f/cd01ad5e-0f88-4c18-9a9b-ec6fa0e9e282/13f1b537-91c3-5adb-9462-d2276b00f5ce#voucherStyle=noimage",
+      dataUsageText: [
+        { text: "Hinweise zur " },
+        {
+          text: "Datenverarbeitung",
+          url: "https://online.sovendus.com/online-datenschutzhinweise/"
+        },
+        { text: " durch Sovendus" }
+      ]
+    },
     checkoutBenefits: {
       recommendations: [
         {

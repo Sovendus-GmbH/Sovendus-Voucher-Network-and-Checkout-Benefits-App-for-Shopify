@@ -1,8 +1,8 @@
-# Build a Shopify app using Remix
+# Shopify App for Sovendus Voucher Network and Checkout Benefits
 
 This is a Shopify app for Sovendus Voucher Network and Checkout Benefits
 
-## Dev env Quick start
+## Developer Quick start
 
 ### Prerequisites
 
