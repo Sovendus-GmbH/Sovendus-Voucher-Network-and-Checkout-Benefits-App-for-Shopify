@@ -52,6 +52,9 @@ export default function QRCodeForm() {
       } else {
         newFormState[countryKey] = { [id]: value };
       }
+      console.log("countryKey", countryKey, id, value);
+      console.log("prevState", prevState);
+      console.log("newFormState", newFormState);
       return newFormState;
     });
   }
@@ -85,6 +88,7 @@ export default function QRCodeForm() {
                 const isEnabledId = "isEnabled";
                 const sourceId = "trafficSourceNumber";
                 const mediumId = "trafficMediumNumber";
+                console.log("countryKey, countryName", countryKey, countryName);
                 return (
                   <Card key={countryKey}>
                     <BlockStack gap="500">
@@ -92,7 +96,7 @@ export default function QRCodeForm() {
                         {countryName + " Settings"}
                       </Text>
                       <Checkbox
-                        id={isEnabledId}
+                        id={countryKey + isEnabledId}
                         label={"Enable Sovendus for " + countryName}
                         checked={formState?.[countryKey]?.[isEnabledId]}
                         onChange={(value) =>
@@ -100,7 +104,7 @@ export default function QRCodeForm() {
                         }
                       />
                       <TextField
-                        id={sourceId}
+                        id={countryKey + sourceId}
                         helpText={
                           "Enter the traffic source number for " + countryName
                         }
@@ -114,7 +118,7 @@ export default function QRCodeForm() {
                         error={errors[sourceId]}
                       />
                       <TextField
-                        id={mediumId}
+                        id={countryKey + mediumId}
                         helpText={
                           "Enter the traffic medium number for " + countryName
                         }
