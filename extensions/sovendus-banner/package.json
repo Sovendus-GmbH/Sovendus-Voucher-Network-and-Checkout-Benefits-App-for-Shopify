@@ -2,7 +2,7 @@
   "name": "sovendus-banner",
   "private": true,
   "version": "1.0.0",
-  "license": "UNLICENSED",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "@shopify/ui-extensions": "2024.1.x",
     "@shopify/ui-extensions-react": "2024.1.x",

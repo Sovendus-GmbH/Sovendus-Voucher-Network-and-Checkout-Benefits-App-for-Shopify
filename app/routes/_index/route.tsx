@@ -1,3 +1,4 @@
+import type { LoaderArgs } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
 import { Form, useLoaderData } from "@remix-run/react";
 
@@ -7,7 +8,7 @@ import indexStyles from "./style.css";
 
 export const links = () => [{ rel: "stylesheet", href: indexStyles }];
 
-export async function loader({ request }) {
+export async function loader({ request }: LoaderArgs) {
   const url = new URL(request.url);
 
   if (url.searchParams.get("shop")) {

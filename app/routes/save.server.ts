@@ -6,21 +6,23 @@ export async function saveSovendusSettings(
   admin: AdminApiContext<RestResources>,
   session: Session,
   dataToSave: formData
-) {
-  const errors = {};
+): Promise<errorsObject> {
+  const errors: errorsObject = {};
   const minifiedDataToSafe: storedFormData = {};
   dataToSave &&
-    Object.entries(dataToSave).map(async ([countryKey, values]) => {
-      try {
-        minifiedDataToSafe[countryKey] = [
-          values.trafficSourceNumber,
-          values.trafficMediumNumber,
-          values.isEnabled,
-        ];
-      } catch (error) {
-        errors[countryKey] = error;
+    (Object.entries(dataToSave) as formDataArray[]).map(
+      async ([countryKey, values]) => {
+        try {
+          minifiedDataToSafe[countryKey] = [
+            values.trafficSourceNumber,
+            values.trafficMediumNumber,
+            values.isEnabled,
+          ];
+        } catch (error) {
+          errors[countryKey] = error;
+        }
       }
-    });
+    );
 
   try {
     const metafield = new admin.rest.resources.Metafield({
@@ -70,7 +72,7 @@ export async function saveSovendusSettings(
 
 export async function getSovendusSettings(
   admin: AdminApiContext<RestResources>
-) {
+): Promise<formData> {
   const response = await admin.graphql(
     `#graphql
     query getSovendusSettings {
@@ -95,14 +97,16 @@ export async function getSovendusSettings(
       const sovSettings: storedFormData =
         element?.node?.value && JSON.parse(element.node.value);
       sovSettings &&
-        Object.entries(sovSettings)?.forEach(([countryCode, values]) => {
-          const [sourceNumber, mediumNumber, isEnabled] = values;
-          initialData[countryCode] = {
-            trafficSourceNumber: sourceNumber || "",
-            trafficMediumNumber: mediumNumber || "",
-            isEnabled,
-          };
-        });
+        (Object.entries(sovSettings) as storedFormDataArray[])?.forEach(
+          ([countryCode, values]) => {
+            const [sourceNumber, mediumNumber, isEnabled] = values;
+            initialData[countryCode] = {
+              trafficSourceNumber: sourceNumber || "",
+              trafficMediumNumber: mediumNumber || "",
+              isEnabled,
+            };
+          }
+        );
     }
   });
   return initialData;
@@ -115,85 +119,54 @@ interface metafieldResponseData {
   data?: { shop?: { metafields?: { edges: metafieldResponseNodeData[] } } };
 }
 
-interface storedFormData {
-  DE?: [string, string, boolean];
-  AT?: [string, string, boolean];
-  NL?: [string, string, boolean];
-  CH?: [string, string, boolean];
-  FR?: [string, string, boolean];
-  IT?: [string, string, boolean];
-  IE?: [string, string, boolean];
-  UK?: [string, string, boolean];
-  DK?: [string, string, boolean];
-  SE?: [string, string, boolean];
-  ES?: [string, string, boolean];
-  BE?: [string, string, boolean];
-  PL?: [string, string, boolean];
-}
-export interface formData {
-  DE?: {
+export type countryCodesType =
+  | "DE"
+  | "AT"
+  | "NL"
+  | "CH"
+  | "FR"
+  | "IT"
+  | "IE"
+  | "UK"
+  | "DK"
+  | "SE"
+  | "ES"
+  | "BE"
+  | "PL";
+
+type storedFormDataArray = [
+  countryCodesType,
+  [string | undefined, string | undefined, boolean | undefined]
+];
+type storedFormData = {
+  [key in countryCodesType]?: [
+    string | undefined,
+    string | undefined,
+    boolean | undefined
+  ];
+};
+
+type errorsObject = {
+  [key in countryCodesType | "sovendus_settings_values"]?: unknown;
+};
+
+export type formKeys =
+  | "isEnabled"
+  | "trafficSourceNumber"
+  | "trafficMediumNumber";
+
+type formDataArray = [
+  countryCodesType,
+  {
+    isEnabled?: boolean;
+    trafficSourceNumber?: string;
+    trafficMediumNumber?: string;
+  }
+];
+export type formData = {
+  [key in countryCodesType]?: {
     isEnabled?: boolean;
     trafficSourceNumber?: string;
     trafficMediumNumber?: string;
   };
-  AT?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  NL?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  CH?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  FR?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  IT?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  IE?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  UK?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  DK?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  SE?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  ES?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  BE?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-  PL?: {
-    isEnabled?: boolean;
-    trafficSourceNumber?: string;
-    trafficMediumNumber?: string;
-  };
-}
+};

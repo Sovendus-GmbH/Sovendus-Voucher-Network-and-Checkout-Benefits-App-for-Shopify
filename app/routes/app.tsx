@@ -1,3 +1,4 @@
+import type { HeadersArgs, LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Outlet, useLoaderData, useRouteError } from "@remix-run/react";
 import polarisStyles from "@shopify/polaris/build/esm/styles.css";
@@ -8,7 +9,7 @@ import { authenticate } from "../shopify.server";
 
 export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
 
-export async function loader({ request }) {
+export async function loader({ request }: LoaderArgs) {
   await authenticate.admin(request);
 
   return json({ apiKey: process.env.SHOPIFY_API_KEY });
@@ -29,6 +30,6 @@ export function ErrorBoundary() {
   return boundary.error(useRouteError());
 }
 
-export const headers = (headersArgs) => {
+export const headers = (headersArgs: HeadersArgs) => {
   return boundary.headers(headersArgs);
 };
