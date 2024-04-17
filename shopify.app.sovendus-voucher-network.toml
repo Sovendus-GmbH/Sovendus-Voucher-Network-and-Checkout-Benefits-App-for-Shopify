@@ -3,22 +3,19 @@
 client_id = "7a19360ca34fec0b17302d80f4fb0804"
 name = "Sovendus Voucher Network"
 handle = "sovendus-voucher-network-2"
-application_url = "https://im-immune-accessed-remove.trycloudflare.com"
+application_url = "https://designation-estimated-obesity-buying.trycloudflare.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
 dev_store_url = "testsovendus.myshopify.com"
-
-[access_scopes]
-# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+include_config_on_deploy = true
 
 [auth]
 redirect_urls = [
-  "https://im-immune-accessed-remove.trycloudflare.com/auth/callback",
-  "https://im-immune-accessed-remove.trycloudflare.com/auth/shopify/callback",
-  "https://im-immune-accessed-remove.trycloudflare.com/api/auth/callback"
+  "https://designation-estimated-obesity-buying.trycloudflare.com/auth/callback",
+  "https://designation-estimated-obesity-buying.trycloudflare.com/auth/shopify/callback",
+  "https://designation-estimated-obesity-buying.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

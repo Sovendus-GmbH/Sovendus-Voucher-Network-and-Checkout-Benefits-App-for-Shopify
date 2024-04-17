@@ -1,3 +1,5 @@
 .cache
 build
 node_modules
+.env-example
+run-production-example.sh

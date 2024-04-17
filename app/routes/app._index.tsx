@@ -19,7 +19,7 @@ export async function loader({ request }: { request: Request }) {
   return await getSovendusSettings(admin);
 }
 
-export default function QRCodeForm() {
+export default function SovendusBackendForm() {
   const errors = useActionData()?.errors || {};
   const initialData = useLoaderData();
   const [isSaving, setIsSaving] = useState<boolean>(false);

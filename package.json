@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "sovendus-shopify-voucher-network-and-checkout-benefits",
   "private": true,
   "scripts": {
     "build": "NODE_ENV=production remix build",
@@ -11,7 +11,7 @@
     "deploy": "shopify app deploy",
     "config:use": "shopify app config use",
     "env": "shopify app env",
-    "start": "remix-serve build",
+    "start": "prisma migrate deploy && remix-serve build",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "shopify": "shopify",
     "prisma": "prisma",
@@ -41,7 +41,6 @@
     "@remix-run/dev": "^1.19.1",
     "@remix-run/eslint-config": "^1.19.1",
     "@types/eslint": "^8.40.0",
-    "@types/qrcode": "^1.5.0",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0"
   },
