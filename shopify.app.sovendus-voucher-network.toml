@@ -3,7 +3,7 @@
 client_id = "7a19360ca34fec0b17302d80f4fb0804"
 name = "Sovendus Voucher Network"
 handle = "sovendus-voucher-network-2"
-application_url = "https://designation-estimated-obesity-buying.trycloudflare.com"
+application_url = "https://manage-refugees-escape-int.trycloudflare.com"
 embedded = true
 
 [build]
@@ -13,9 +13,9 @@ include_config_on_deploy = true
 
 [auth]
 redirect_urls = [
-  "https://designation-estimated-obesity-buying.trycloudflare.com/auth/callback",
-  "https://designation-estimated-obesity-buying.trycloudflare.com/auth/shopify/callback",
-  "https://designation-estimated-obesity-buying.trycloudflare.com/api/auth/callback"
+  "https://manage-refugees-escape-int.trycloudflare.com/auth/callback",
+  "https://manage-refugees-escape-int.trycloudflare.com/auth/shopify/callback",
+  "https://manage-refugees-escape-int.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

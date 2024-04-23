@@ -30,6 +30,13 @@ export function useGetTrafficNumbers(
   const isEnabled =
     sovendusSettings[addressData.countryCode]?.[2] &&
     Boolean(trafficSourceNumber && trafficMediumNumber);
+  console.log(
+    "settings",
+    sovendusSettings,
+    addressData.countryCode,
+    sovendusSettings[addressData.countryCode]
+  );
+
   return [isEnabled, trafficSourceNumber, trafficMediumNumber];
 }
 

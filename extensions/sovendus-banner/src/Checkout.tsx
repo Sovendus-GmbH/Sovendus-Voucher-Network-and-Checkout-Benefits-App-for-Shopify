@@ -77,7 +77,9 @@ function SovendusBanner({
     Number(shippingPrice?.amount);
 
   useEffect(() => {
+    console.log("started", isEnabled, netOrderValue)
     if (isEnabled && netOrderValue) {
+      console.log("enabled")
       getBannerData({
         setBannerData,
         trafficSourceNumber,
@@ -92,7 +94,7 @@ function SovendusBanner({
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isEnabled]);
   return (
     !!bannerData && (
       <BlockStack border="base" padding="base" borderRadius="base">

@@ -19756,6 +19756,7 @@ ${errorInfo.componentStack}`);
     const trafficSourceNumber = (_c = sovendusSettings[addressData.countryCode]) == null ? void 0 : _c[0];
     const trafficMediumNumber = (_d = sovendusSettings[addressData.countryCode]) == null ? void 0 : _d[1];
     const isEnabled = ((_e = sovendusSettings[addressData.countryCode]) == null ? void 0 : _e[2]) && Boolean(trafficSourceNumber && trafficMediumNumber);
+    console.log("settings", sovendusSettings, addressData.countryCode);
     return [isEnabled, trafficSourceNumber, trafficMediumNumber];
   }
   function getBannerData({
@@ -19824,7 +19825,9 @@ ${errorInfo.componentStack}`);
     const phone = usePhone();
     const netOrderValue = Number(grossPrice == null ? void 0 : grossPrice.amount) - Number(taxPrice == null ? void 0 : taxPrice.amount) - Number(shippingPrice == null ? void 0 : shippingPrice.amount);
     (0, import_react19.useEffect)(() => {
+      console.log("started", isEnabled, netOrderValue);
       if (isEnabled && netOrderValue) {
+        console.log("enabled");
         getBannerData({
           setBannerData,
           trafficSourceNumber,
@@ -19838,7 +19841,7 @@ ${errorInfo.componentStack}`);
           phone
         });
       }
-    }, []);
+    }, [isEnabled]);
     return !!bannerData && /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(BlockStack2, { border: "base", padding: "base", borderRadius: "base", children: [
       bannerData.nativeBanner ? /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(SovendusNativeBanner, { bannerData: bannerData.nativeBanner }) : /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(SovendusImageBanner, { bannerData: bannerData.imageBanner }),
       bannerData.checkoutBenefits && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
