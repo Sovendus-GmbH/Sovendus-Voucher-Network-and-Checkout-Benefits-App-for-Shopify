@@ -30,7 +30,6 @@ export const action = async ({ request }: ActionArgs) => {
         throw new Response("Unhandled webhook topic", { status: 404 });
     }
   } catch (error) {
-    console.log("error", error);
     throw new Response("Something went wrong: " + error, { status: 404 });
   }
 };
@@ -44,7 +43,6 @@ async function sendDataRedactMail(payload: payloadType, shop: string) {
   if (!payload?.customer?.email) {
     return new Response("No email in payload", { status: 500 });
   }
-  console.log("blabla", payload, shop);
   await sendEmail({
     subject: "Datenlöschanfrage",
     text: `
@@ -66,10 +64,8 @@ async function sendDataRedactMail(payload: payloadType, shop: string) {
 
 async function sendDataRequestMail(payload: payloadType, shop: string) {
   if (!payload?.customer?.email) {
-    console.log("no customer", payload, shop);
     return new Response("No email in payload", { status: 500 });
   }
-  console.log("blabla", payload, shop);
   await sendEmail({
     subject: "Datenauskunft",
     text: `

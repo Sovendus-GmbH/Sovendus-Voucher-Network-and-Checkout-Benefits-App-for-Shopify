@@ -16,7 +16,9 @@
     "shopify": "shopify",
     "prisma": "prisma",
     "setup": "prisma generate && prisma migrate deploy",
-    "test_data_request": "shopify webhook trigger --address http://localhost:49298/webhooks --topic customers/data_request"
+    "test_data_request": "shopify webhook trigger --address http://localhost:65232/webhooks --topic customers/data_request",
+    "test_data_redact": "shopify webhook trigger --address http://localhost:65232/webhooks --topic customers/redact",
+    "test_shop_redact": "shopify webhook trigger --address http://localhost:65232/webhooks --topic shop/redact"
   },
   "dependencies": {
     "@prisma/client": "^5.8.0",

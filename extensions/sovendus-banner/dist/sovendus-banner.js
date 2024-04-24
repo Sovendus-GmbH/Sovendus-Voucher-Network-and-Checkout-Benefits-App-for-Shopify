@@ -19756,7 +19756,12 @@ ${errorInfo.componentStack}`);
     const trafficSourceNumber = (_c = sovendusSettings[addressData.countryCode]) == null ? void 0 : _c[0];
     const trafficMediumNumber = (_d = sovendusSettings[addressData.countryCode]) == null ? void 0 : _d[1];
     const isEnabled = ((_e = sovendusSettings[addressData.countryCode]) == null ? void 0 : _e[2]) && Boolean(trafficSourceNumber && trafficMediumNumber);
-    console.log("settings", sovendusSettings, addressData.countryCode);
+    console.log(
+      "settings",
+      sovendusSettings,
+      addressData.countryCode,
+      sovendusSettings[addressData.countryCode]
+    );
     return [isEnabled, trafficSourceNumber, trafficMediumNumber];
   }
   function getBannerData({
