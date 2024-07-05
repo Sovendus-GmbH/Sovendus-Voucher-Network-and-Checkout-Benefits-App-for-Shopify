@@ -1,7 +1,7 @@
 # Shopify App for Sovendus Voucher Network and Checkout Benefits
 
 > [!WARNING]
-> The Shopify app only works if you have upgraded your thank you page and order status page to the "Checkout extensibility" version, the dosc for the old version can be found here [here](https://github.com/Sovendus-GmbH/Sovendus-Shopify-Voucher-Network-and-Checkout-Benefits-Documentation)
+> The Shopify app only works if you have upgraded your thank you page and order status page to the "Checkout extensibility" version, the docs for the old version can be found here [here](https://github.com/Sovendus-GmbH/Sovendus-Shopify-Voucher-Network-and-Checkout-Benefits-Documentation)
 
 ## 1. Send your Shopify admin URL to Sovendus
 
