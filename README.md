@@ -14,11 +14,11 @@ a. To generate a installation link, we need the url of your Shopify backend e.g.
 
 b. Get the color code for the buttons on the checkout page
 
-    - Go to Settings -> Checkout -> click on Customize to customize your checkout pages
-    - Click on the gear icon to open the settings sidebar
-    - Scroll down to the colors section and copy the color code for buttons
+- Go to Settings -> Checkout -> click on Customize to customize your checkout pages
+- Click on the gear icon to open the settings sidebar
+- Scroll down to the colors section and copy the color code for buttons
 
-    ![Get the color code of your checkout buttons](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/color_code.png)
+![Get the color code of your checkout buttons](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/color_code.png)
 
 c. Send the backend url and color code to Sovendus
 
