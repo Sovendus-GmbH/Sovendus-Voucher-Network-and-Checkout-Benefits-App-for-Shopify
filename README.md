@@ -35,7 +35,9 @@ Go to the Sovendus App and enter the traffic source and medium numbers for each 
 - Go to Settings -> Checkout -> click on Customize to customize your checkout pages
 - Click on Checkout in the top middle and then on Thank you
 - Click on Add app block on the bottom left, then on Sovendus Voucher Network (make sure the widget is positioned as on the screenshot below) and then Save
+  
   ![Thank you page Sovendus widget position](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/thank-you-position.png)
 - Click on Thank you in the top middle and then on Order status
 - Click on Add app block on the bottom left, then on Sovendus Voucher Network (make sure the widget is positioned as on the screenshot below) and then Save
+  
   ![Order status page Sovendus widget position](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/order-status-position.png)
