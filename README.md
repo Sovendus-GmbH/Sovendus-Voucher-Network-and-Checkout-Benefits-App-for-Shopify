@@ -1,10 +1,13 @@
 # Shopify App for Sovendus Voucher Network and Checkout Benefits
 
-## How to check if you are using the new Shopify checkout version
-![New Shopify Checkout Version](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/newShopifyCheckoutVersion.png)
-
+## This documentation is only for the new Shopify version
 > [!WARNING]
-> The Shopify app only works if you have upgraded your thank you page and order status page to the "Checkout extensibility" version, the docs for the old version can be found here [here](https://developer-hub.sovendus.com/Voucher-Network-Checkout-Benefits/Web-Integration/Shopify-Integration-(old-version))
+> The Shopify app only works if you have upgraded your thank you / order status page to the "Checkout extensibility" version, the [docs for the old version can be found here](https://developer-hub.sovendus.com/Voucher-Network-Checkout-Benefits/Web-Integration/Shopify-Integration-(old-version))
+
+### How to check if you are using the new Shopify checkout version
+To check your thank you / order status page version go to "Settings -> Checkout", if you are on the new version it should look like on the screenshot below:
+
+![New Shopify Checkout Version](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/newShopifyCheckoutVersion.png)
 
 ## Create discount codes in bulk
 
