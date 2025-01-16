@@ -1,4 +1,4 @@
-# Shopify App for Sovendus Voucher Network and Checkout Benefits
+# Sovendus App for Shopify
 
 ## This documentation is only for the new Shopify version
 >
