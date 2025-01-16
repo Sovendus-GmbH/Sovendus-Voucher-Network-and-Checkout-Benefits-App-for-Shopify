@@ -9,7 +9,7 @@
 
 To check your thank you / order status page version go to "Settings -> Checkout", if you are on the new version it should look like on the screenshot below:
 
-![New Shopify Checkout Version](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/new-shopify-checkout-version.png)
+![New Shopify Checkout Version](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/new-shopify-checkout-version2.png)
 
 ## Create discount codes in bulk (optional)
 
