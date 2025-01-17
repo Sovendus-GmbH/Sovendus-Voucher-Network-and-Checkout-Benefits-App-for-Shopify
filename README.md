@@ -48,5 +48,4 @@ Go to the Sovendus App and follow the instructions provided in the app
 
 ## Example Image for Shopify App Integration
 
-![Shopify-App-image](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify
-/main/Shopify-App.png)
+![Shopify-App-image](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/Shopify-App.png)
