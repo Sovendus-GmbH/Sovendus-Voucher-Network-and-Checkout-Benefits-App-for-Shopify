@@ -46,6 +46,8 @@ Go to the Sovendus App and follow the instructions provided in the app
 
 - Instead, verify that the Sovendus integration is visible on the "Thank You" page of your store.
 
+- Ensure that the position of the Sovendus banner matches the position shown in the example image provided below.
+
 ## Example Image for Shopify App Integration
 
 ![Shopify-App-image](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify/main/Shopify-App.png)
