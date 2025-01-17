@@ -37,3 +37,16 @@ Open the installation URL you will receive from Sovendus and click on install
 ## 3. Configure the App
 
 Go to the Sovendus App and follow the instructions provided in the app
+
+## 4. Test the app
+
+# To test the integration, ensure the following:
+
+- The Shopify App (new version) is not yet recognized by the Self-Test Extension, so no data will be displayed there.
+
+- Instead, verify that the Sovendus integration is visible on the "Thank You" page of your store.
+
+## Example Image for Shopify App Integration
+
+![Shopify-App-image](https://raw.githubusercontent.com/Sovendus-GmbH/Sovendus-Voucher-Network-and-Checkout-Benefits-App-for-Shopify
+/main/Shopify-App.png)
