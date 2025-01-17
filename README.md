@@ -40,7 +40,7 @@ Go to the Sovendus App and follow the instructions provided in the app
 
 ## 4. Test the app
 
-# To test the integration, ensure the following:
+### To test the integration, ensure the following:
 
 - The Shopify App (new version) is not yet recognized by the Self-Test Extension, so no data will be displayed there.
 
