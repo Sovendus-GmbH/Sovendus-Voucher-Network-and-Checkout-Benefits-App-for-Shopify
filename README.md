@@ -18,7 +18,9 @@ You can use for example [Bulk Discounts](https://apps.shopify.com/bulk-discounts
 
 ## 1. Request installation URL from Sovendus
 
-Just let us know that you need an installation link for the Shopify Sovendus app and we'll get back to you shortly
+Just let us know for which site(s) you need an installation link for the Shopify Sovendus app and we'll get back to you shortly.
+
+Note that you'll receive a single installation link. It works accross your whole shopify organization. Just let us know in case its not working and you'll get another link.
 
 ## 2. Install the app
 
